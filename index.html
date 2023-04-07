@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets\styles.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <title>Coffee Shop</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand me-5" href="#">
+          <img src="assets\imgs\novalogo.png" alt="Atlas logo" height="80">
+          <strong>Atlas</strong>
+          <i class="bi bi-cup-hot-fill"></i> 
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex justify-content-between w-100">
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Entrar</a></li>
+                <li><a class="dropdown-item" href="#">Registrar</a></li>
+                <li><a class="dropdown-item" href="#">Minha conta</a></li>
+              </ul>
+            </li>
+            <li class="nav-item active me-5" style="width: 500px;">
+              <form class="d-flex me-auto" role="search">
+                <input class="form-control me-2 w-100" type="search" placeholder="Espresso" aria-label="Search">
+                <button class="btn btn-dark btn-outline-white" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item active">
+              <a class="btn btn-light position-relative me-4" href="#" role="button">
+                <i class="bi bi-bag-fill"></i>
+                Carrinho
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container-fluid d-none d-lg-block">
+    <div class="row h-100 d-flex justify-content-around">
+      <div class="d-none d-xxl-block col-xl-3 col-lg-5 m-2 p-3 text-center container-fluid" id="search">
+        <h3 class="col">Busca rápida</h3>
+        <i class="bi bi-search"></i>
+        <div class="row row-cols-1 justify-content-between gap-5 mt-5">
+          <div class="col dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tipo
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Café Quente</a></li>
+              <li><a class="dropdown-item" href="#">Café Gelado</a></li>
+            </ul>
+          </div>
+          <div class="col input-group">
+            <span class="input-group-text">De R$ até R$</span>
+            <input type="text" aria-label="First name" class="form-control">
+            <input type="text" aria-label="Last name" class="form-control">
+          </div>
+          
+        </div>
+        <img src="assets\imgs\cafe.png" alt="grãos de café" height="100">
+      </div>
+
+      <div class="col-lg-8 col-xxl-6 m-2 p-0 d-none d-lg-block" id="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide w-100 h-100">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets\imgs\1.png" class="d-block w-100" height="485" alt="slide" style="border-radius: 50px;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\imgs\2.png" class="d-block w-100" height="485" alt="slide" style="border-radius: 50px;">
+            </div>
+            <div class="carousel-item">
+              <img src="assets\imgs\3.png" class="d-block w-100" height="485" alt="slide" style="border-radius: 50px;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+ 
+  <main class="row m-0 pt-3 gap-5 d-flex justify-content-center overflow-auto">
+    <article class="col-lg-9 col-xxl-7 me-4 mt-5" style="height: 1700px;">
+      <div class="w-100 h-100 m-0 p-1 d-flex row row-cols-1 row-cols-sm-3 row-cols-md-4 justify-content-around">
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              CAPPUCINO
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              (35)
+            </p>
+            <a href="#" class="btn btn-success">R$ 17,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              MOCHA
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              (14)
+            </p>
+            <a href="#" class="btn btn-success">R$ 18,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              ESPRESSO
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+              (21)
+            </p>
+            <a href="#" class="btn btn-success">R$ 15,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              MACCHIATO
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              (7)
+            </p>
+            <a href="#" class="btn btn-success">R$ 20,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              IRISH
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              (3)
+            </p>
+            <a href="#" class="btn btn-success">R$ 22,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              VANILLA
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              (9)
+            </p>
+            <a href="#" class="btn btn-success">R$ 15,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              LATTE
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              (10)
+            </p>
+            <a href="#" class="btn btn-success">R$ 17,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              ICED
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              (2)
+            </p>
+            <a href="#" class="btn btn-success">R$ 15,00</a>
+          </div>
+        </div>
+        <div class="col m-2 card" id="somecard">
+          <img src="assets\imgs\CUP.png" class="card-img-top" alt="copo">
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              DECAF
+              <i class="bi bi-cup-straw"></i>
+            </h5>
+            <p class="card-text">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              (5)
+            </p>
+            <a href="#" class="btn btn-success">R$ 15,00</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <aside class="d-none d-md-block col-lg-5 col-xxl-3 row row-cols-1 position-relative me-2" style="height: 1500px;">
+      <div class="col position-absolute m-0 top-0 p-5 text-center" style="height: 70%;" id="ranking">
+        <h2>Mais pedidos</h2>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Cappuccino</div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </div>
+            <span class="badge bg-dark rounded-pill">305</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Decaf</div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <span class="badge bg-dark rounded-pill">289</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Espresso</div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <span class="badge bg-dark rounded-pill">266</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Latte</div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <span class="badge bg-dark rounded-pill">205</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Macciato</div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <span class="badge bg-dark rounded-pill">194</span>
+          </li>
+        </ol>
+       </div>
+     <div class="col position-absolute m-0 bottom-50 p-4 text-center row row-cols-1" style="height: 20%;" id="promo">
+        <h2 class="col">Sorteio!</h2>
+        <p class="col">Cadastre-se para concorrer a 4 Macchiatos!</p>
+        <form class="col row g-1 justify-content-center">
+          <div class="col-auto">
+            <input type="password" class="form-control" id="inputPassword2" placeholder="email@example.com">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-success">
+              <i class="bi bi-box-arrow-in-right"></i>
+            </button>
+          </div>
+        </form>
+     </div>
+    </aside>
+  </main>
+
+  <footer class="text-white pt-5 pb-4 container-fluid h-100 text-center text-md-left">
+    <div class="row text-center text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-success">Atlas</h5>
+        <p>A nossa missão é proporcionar aos nossos clientes um ambiente caloroso e acolhedor onde possam desfrutar de um café de alta qualidade. Estamos comprometidos em obter os melhores ingredientes e usar práticas sustentáveis e ecológicas.</p>
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-success">Links úteis</h5>
+        <p><a href="#" class="text-white">Fale Conosco</a></p>
+        <p><a href="#" class="text-white">FAQ</a></p>
+        <p><a href="#" class="text-white">App</a></p>
+        <p><a href="#" class="text-white">Nossa Marca</a></p>  
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-success">Entre em contato</h5>
+        <p><i class="bi bi-house-fill"></i> Rua Zero, n° 2, MG</p>
+        <p><i class="bi bi-envelope-fill"></i> atlas@mail.com</p>
+        <p><i class="bi bi-telephone-fill"></i> (11) 23456-7890</p> 
+      </div>
+      <hr class="mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p>Copyright ©2023</p>
+        </div>
+        <div class="col-md-5 col-lg-4 text-center text-md-left">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
